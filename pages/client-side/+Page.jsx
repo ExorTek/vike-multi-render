@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useClientCounterStore } from '@store';
 
 function Page() {
   const [data, setData] = useState({ user: null, products: [] });
-  const [count, setCount] = useState(0);
+
+  const { count, increment, decrement } = useClientCounterStore();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,9 +35,6 @@ function Page() {
   }, []);
 
   const { user, products } = data;
-
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count - 1);
 
   return (
     <div className={'w-full min-h-screen bg-gray-50'}>

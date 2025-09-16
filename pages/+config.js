@@ -1,4 +1,5 @@
 import vikeReact from 'vike-react/config';
+import vikeReactZustand from 'vike-react-zustand/config';
 import { MainLayout } from '@layouts';
 import { onRenderHtml, onRenderClient } from '@renderer';
 
@@ -17,5 +18,5 @@ export default {
     enable: true,
     redirects: true, // When true, enables pre-rendering of redirect pages
   },
-  extends: [vikeReact],
+  extends: [vikeReact, vikeReactZustand],
 };

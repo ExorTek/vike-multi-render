@@ -1,13 +1,11 @@
 import { usePageContext } from '@hooks';
-import { useState } from 'react';
+import { useServerCounterStore } from '@store';
 
 function Page() {
   const pageContext = usePageContext();
-  const [count, setCount] = useState(0);
   const { user, products } = pageContext.data;
 
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count - 1);
+  const { count, increment, decrement } = useServerCounterStore();
 
   return (
     <div className={'w-full min-h-screen bg-gray-50'}>
