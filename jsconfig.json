@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "paths": {
+      "@/*": ["./*"],
+      "@components": ["components/index"],
+      "@constants": ["constants/index"],
+      "@helpers": ["helpers/index"],
+      "@hooks": ["hooks/index"],
+      "@layouts": ["layouts/index"],
+      "@lib": ["lib/index"],
+      "@pages": ["pages/index"],
+      "@providers": ["providers/index"],
+      "@renderer": ["renderer/index"],
+      "@services": ["services/index"],
+      "@store": ["store/index"],
+      "@styles": ["styles"]
+    },
+    "baseUrl": "./",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true
+  }
+}
